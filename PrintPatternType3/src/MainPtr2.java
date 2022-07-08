@@ -17,7 +17,7 @@ public class MainPtr2 {
 			for(int j=1;j<=st;j++)
 			{
 				System.out.print((char)(x+64)+" ");
-				if(j<st/2+1)
+				if(j<=st/2)
 					x--;
 				else
 					x++;

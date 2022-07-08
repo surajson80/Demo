@@ -1,35 +1,38 @@
 import java.util.Scanner;
 
-public class MainPtr10 {
+public class MainPtr2Sub {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the number of lines: ");
 		int n=sc.nextInt();
 		sc.close();
-		int sp=n/2,st=n;
+		int sp=0,st=n;
 		for(int i=1;i<=n;i++)
 		{
-			if(i>1&&i<n)
+			for(int j=1;j<=sp;j++)
 			{
+				System.out.print("  ");
+			}
+			int x=st/2+1;
 			for(int j=1;j<=st;j++)
 			{
-					System.out.print("* ");
-			}	
-			System.out.println();
+				System.out.print(x+" ");
+				if(j<=st/2)
+					x--;
+				else
+					x++;
+			}
+			if(i<=n/2)
+			{
+				sp++;
+				st=st-2;
 			}
 			else
 			{
-				for(int j=1;j<=st;j++)
-				{
-						System.out.print("* ");
-						if(j>st/2+1)
-							System.out.print("  ");
-
-				}
-				st=st-2;
+				sp--;
+				st=st+2;
 			}
 			System.out.println();
 		}
 	}
-
 }

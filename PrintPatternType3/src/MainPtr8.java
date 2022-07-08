@@ -13,27 +13,24 @@ public class MainPtr8 {
 			{
 				System.out.print("  ");
 			}
-			int x=1;
+			int x=sp+1;
 			for(int j=1;j<=st;j++)
 			{
-				if(j%2==0)
+				
+					System.out.print(j+" ");
+				if(j<st)
 					System.out.print("* ");
-				else
-				{
-					System.out.print(x+" ");
-					x++;
-				}
-
+					
 			}
 			if(i<=n/2)
 			{
 				sp--;
-				st=st+2;
+				st++;
 			}
 			else
 			{
 				sp++;
-				st=st-2;
+				st--;
 			}
 			System.out.println();
 		}
